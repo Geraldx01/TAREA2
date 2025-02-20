@@ -1,0 +1,39 @@
+body {
+    margin: 0px;
+    padding: 0;
+    height: 70vh;
+    width: 100vw;
+    background-image: url("/img/Portada2.webp");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.btnContainer {
+    margin: -16px;
+    padding: 5vh;
+    text-align: center;
+    font-size: 21px;
+
+}
+
+div h2 {
+    color: #1b0e21;
+    font-size: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+div button {
+    height: 50px;
+    width: 100px;
+}
+
+.btn-button-login:hover{
+    background-color: #517260;
+}
+
+
