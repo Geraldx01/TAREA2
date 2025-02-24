@@ -1,0 +1,1101 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* background-image: url("/img/the-lore2.jpg"); */
+    background: #E8EDE7;
+    background: linear-gradient(274deg, #E8EDE7 -44%, #378BA4 3%, #036280 4%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+
+/* Barra de navegación */
+.barraNavegacion {
+    background-color: #012E4A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 28px;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+#logo img {
+    height: 205px;
+    width: 205px;
+    margin: -48px;
+    padding: 7px;
+
+}
+
+
+#menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 22px;
+    text-align: center;
+
+}
+
+#menu li {
+    margin: 3px;
+    height: 50px;
+
+    justify-items: baseline;
+
+
+
+}
+
+#menu a {
+    display: flex;
+    color: #E8EDE7;
+    text-decoration: none;
+    background-color: #012E4A;
+    /* border: 1px solid hsl(147, 17%, 38%); */
+    text-align: center;
+    height: 36px;
+    align-items: center;
+    border-radius: 4px;
+
+
+}
+
+#menu a:hover {
+    background-color: #378BA4;
+
+
+
+}
+
+.menuToggle {
+    font-size: 24px;
+    color: #E8EDE7;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Inico de sesion / registrarse */
+
+#botonAbrir {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #012E4A;
+    color: #E8EDE7;
+    cursor: pointer;
+}
+
+#botonAbrir:hover {
+    background-color: #378BA4;
+}
+
+#seccionDesplegable {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-desplegable {
+    background-color: #E8EDE7;
+    padding: 31px;
+    border-radius: 10px;
+    text-align: center;
+    position:relative;
+}
+
+#seccionDesplegable .boton-cerrar {
+    position: absolute;
+    top: -18px;
+    right: 8px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#seccionDesplegable .imagen-inicio {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#seccionDesplegable input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #E8EDE7;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+#seccionDesplegable button {
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #012E4A;
+    color: #E8EDE7;
+    cursor: pointer;
+    margin-top: 10px;
+
+
+}
+
+#seccionDesplegable button:hover {
+    background-color: #378BA4;
+}
+
+/*Carrito de compras*/
+
+#carrito {
+    position: absolute;
+    top: 140px;
+    right: 8px;
+    background-color: #012E4A;
+    border: 2px solid #81BECE;
+    padding: 1px;
+    display: none;
+    z-index: 999;
+    color: #E8EDE7;
+
+}
+
+.carrito-icono {
+    color: #E8EDE7;
+    font-size: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+#carrito button {
+    width: 50%;
+    padding: 0px;
+    background-color: #81BECE;
+    color: #E8EDE7;
+    border: none;
+    border-radius: 3px;
+    margin-top: 2px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+.contador-carrito {
+    background-color: red;
+    color: #E8EDE7;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: -1;
+}
+
+#carrito button:hover {
+    background-color: #378BA4;
+}
+
+
+@media screen and (max-width: 480px) {
+    #carrito {
+        top: 140px;
+        right: -174px;
+        left: 322px;
+        padding: 32px;
+    }
+}
+
+
+
+/* ---------------------------------------- */
+
+
+/* menú responsive */
+@media screen and (max-width: 767px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        background-color: #012E4A;
+        text-align: center;
+        border-top: 1px solid #378BA4;
+        font-size: 12px;
+
+    }
+
+
+    #menu.active {
+        display: flex;
+        height: 230px;
+        margin-right: 565px;
+        padding-right: 46px;
+        margin-top: 64px;
+        margin-left: 0px;
+        padding-bottom: 34px;
+
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .menuToggle {
+        width: 99px;
+        height: 32px;
+        border-radius: 5px;
+        border: none;
+        transition: all 0.5s ease-in-out;
+        font-size: 12px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        background: #012E4A;
+        color: #E8EDE7;
+    }
+
+    .menuToggle:hover {
+        box-shadow: 0 0 20px 0px #2e2e2e3a;
+    }
+
+    .menuToggle .icon {
+        position: absolute;
+        height: 40px;
+        width: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+    }
+
+    .menuToggle .text {
+        transform: translateX(36px);
+    }
+
+    .menuToggle:hover .icon {
+        width: 175px;
+    }
+
+    .menuToggle:hover .text {
+        transition: all 0.5s;
+        opacity: 0;
+    }
+
+    .menuToggle:focus {
+        outline: none;
+    }
+
+    .menuToggle:active .icon {
+        transform: scale(0.85);
+    }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+    #menu.active {
+        display: flex;
+        height: 222px;
+        margin-right: 471px;
+        padding-right: 27px;
+        margin-top: 64px;
+        margin-left: 0px;
+    }
+
+}
+
+/* ---------------------------------------- */
+
+/* Inicio */
+#inicio {
+    padding: 21px 7px;
+    margin-top: 63px;
+    color: #E8EDE7;
+}
+
+
+.contenedorInicio {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid #E8EDE7;
+    border-radius: 10px;
+    height: 528px;
+}
+
+.BtnInicio {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imagenInicio {
+    width: 100%;
+    flex-shrink: 0;
+    height: 549px;
+
+}
+
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #E8EDE7;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.flechaIzquierda {
+    left: 10px;
+}
+
+.flechaDerecha {
+    right: 10px;
+}
+
+.flecha:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 767px) {
+    #inicio {
+        height: 249px;
+        width: 748px;
+    }
+
+    .contenedorInicio {
+        width: 753px;
+        height: 340px;
+    }
+
+    .imagenInicio {
+        height: 340px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #inicio {
+        height: 273px;
+        width: 600px;
+    }
+
+    .contenedorInicio {
+        width: 628px;
+        height: 370px;
+    }
+
+    .imagenInicio {
+        height: 366px;
+    }
+}
+
+
+/* Productos */
+
+#inicioProductos {
+    width: auto;
+    height: auto;
+    margin-bottom: 65px;
+
+}
+
+#productos h2 {
+    text-align: center;
+    color: #E8EDE7;
+}
+
+.lista-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: #E8EDE7;
+    margin-top: -17px;
+}
+
+.contenedor-imagen {
+    border: 5px solid #81BECE;
+    padding: 0;
+    text-align: center;
+    border-radius: 10px;
+    color: #1b0e21;
+    position: relative;
+    display: inline-block;
+    margin: 6px;
+
+}
+
+#productos button {
+    width: 64%;
+    padding: 5px;
+    background-color: #012E4A;
+    color: #E8EDE7;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#productos button:hover {
+    background-color: #378BA4;
+}
+
+.lista-productos h3,
+.lista-productos p {
+    color: #E8EDE7;
+}
+
+
+/*Informacion de cada producto*/
+
+.imagen {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: transparent;
+
+}
+
+.boton-informacion {
+    bottom: 10px;
+    left: 50%;
+    color: #1b0e21;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    right: -33%;
+    bottom: -205px;
+    transform: translate(-96%, -50%);
+    background-color: #E8EDE7;
+    padding: 18px;
+    margin-left: 75%;
+    margin-right: -60%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 10px;
+    color: #1b0e21;
+}
+
+.popup p {
+    color: #1b0e21;
+}
+
+.popup button {
+    margin-top: 10px;
+    background-color: #012E4A;
+    color: #E8EDE7;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 480px) {
+    #productos{
+        height: 1410px;
+        width: 640px;
+    }
+    .lista-productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: auto;
+        margin-top: -17px;
+    }
+
+    .contenedor-imagen {
+        width: 203px;
+        margin: 10px auto;
+    }
+
+    .imagen {
+        width: 100px;
+        height: 250px;
+    }
+
+    .popup {
+        width: 190px;
+        height: 428px;
+        background: linear-gradient(274deg, #E8EDE7 -44%, #378BA4 3%, #036280 4%);
+        
+    }
+    
+    .popup p{
+        width: 159px;
+        height: 343px;
+        margin-left: -2px;
+        font-size: 15px;
+        color: #E8EDE7;
+       
+    }
+}
+
+
+
+/*Envios*/
+#servicioEnvio {
+    color: #1b0e21;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    background-color: #012E4A;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50vh;
+    margin-top: 10px;
+
+}
+
+.infoEnvio {
+    margin: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    #servicioEnvio {
+        height: 300px;
+        width: 640px;
+    }
+
+}
+
+
+/*Nuestros servicio*/
+
+#servicios {
+    color: #E8EDE7;
+    margin-top: 10px;
+    height: 1039px;
+    text-align: center;
+    font-size: 22px;
+
+}
+
+
+.NuestrosServicios {
+    display: grid;
+}
+
+.contenedorServicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.NuestrosServicios {
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 319px;
+    text-align: center;
+    padding: 25px;
+}
+
+.imagenPortada {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.botonMasInfo {
+    background-color: #012E4A;
+    color: #E8EDE7;
+    border: none;
+    padding: 6px 27px;
+    margin: 20px 28px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 219px;
+    height: 47px;
+}
+
+.botonVolver {
+    background-color: #012E4A;
+    color: #E8EDE7;
+    border: none;
+    padding: 4px 19px;
+    margin: 20px 74px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 117px;
+    height: 39px;
+}
+
+.botonMasInfo:hover,
+.botonVolver:hover {
+    background-color: #378BA4;
+}
+
+.infoAdicional {
+    width: 100%;
+    max-width: 259px;
+    height: auto;
+    font-size: 17px;
+    color: #E8EDE7;
+    margin: 0 auto;
+}
+
+.NuestrosServicios img {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-left: 0px;
+}
+
+/* responsive */
+@media screen and (max-width: 767px) {
+
+    #servicios {
+        height: 41rem;
+        width: 48rem;
+    }
+    .contenedorServicios {
+        gap: 10px;
+    }
+
+    .NuestrosServicios {
+        width: 200px;
+        margin-left: 8px;
+        padding: 19px;
+    }
+
+    .botonMasInfo {
+        width: 139px;
+        height: 45px;
+        margin-left: 16px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .botonVolver {
+        width: 139px;
+        height: 45px;
+        margin-left: 21px;
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 46px;
+    }
+
+    .infoAdicional {
+        width: 211px;
+        height: 240px;
+        margin-left: -18px;
+        padding: 15px;
+        font-size: 12px;
+        margin-top: -22px;
+    }
+
+    #BtnServ {
+        width: 218px;
+        margin-left: -27px;
+        padding: 0px;
+        font-size: 19px;
+        margin-top: -48px;
+
+    }
+
+    .NuestrosServicios img {
+        width: 218px;
+        margin-left: -27px;
+        padding: 18px;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #servicios {
+        height: 52rem;
+        width: 40rem;
+        margin-top: 2rem;
+    }
+    .contenedorServicios {
+        gap: 10px;
+    }
+
+    .NuestrosServicios {
+        width: 193px;
+        margin-left: 0px;
+        padding: 15p
+    }
+
+    .botonMasInfo {
+        width: 139px;
+        height: 45px;
+        margin-left: 16px;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .botonVolver {
+        width: 139px;
+        height: 45px;
+        margin-left: 21px;
+        padding: 12px;
+        font-size: 15px;
+        margin-top: 46px;
+    }
+
+    .infoAdicional {
+        width: 192px;
+        margin-top: -34px;
+        font-size: 11px;
+        
+    }
+
+    #BtnServ {
+        width: 216px;
+        margin-left: -27px;
+        padding: 0px;
+        font-size: 12px;
+        margin-top: -37px;
+        color: #012E4A;
+
+    }
+
+    .NuestrosServicios img {
+        width: 211px;
+        margin-left:-24px ;
+        margin-top: -13px;
+
+    }
+}
+
+
+
+/* Formulario de contacto*/
+
+#contacto{
+    margin-top: 174px;
+    height: 524px;
+}
+.contact-form {
+    display: flex;
+    background-color: transparent;
+    padding: 11px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 25px #0000009a;
+    width: 926px;
+    height: 415px;
+    border: 1px solid #E8EDE7;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-top: 2px;
+    position: static;
+}
+
+#formulario-contacto{
+    height: 393px;
+    width: 887px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-left: 122px;
+}
+#formulario-contacto h2 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    color: #E8EDE7;
+    text-align: center;
+}
+
+.form-group {
+
+    width: 214px;
+    margin-top: -17px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #E8EDE7;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 53vw;
+    padding: 0px;
+    margin: 0px;
+    border: 1px solid #E8EDE7;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#formulario-contacto button {
+    text-align: center;
+    width: 39%;
+    padding: 3px;
+    background-color: #012E4A;
+    color: #E8EDE7;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn-enviar:hover {
+    background-color: #378BA4;
+}
+
+.whatsapp-contact {
+    margin-top: -113px;
+    margin-left: 200px;
+    text-align: center;
+}
+
+.whatsapp-contact p {
+    margin-top: 95px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    color: #E8EDE7;
+    width: 183px;
+    height: 59px;
+}
+
+.whatsapp-contact img {
+    width: 50px;
+    height: 50px;
+    margin-top: -113px;
+    margin-left: 200px;
+}
+
+/* Media Queries para hacer el diseño responsive */
+
+/* Para tablets */
+@media screen and (max-width: 767px) {
+
+    #contacto {
+        margin-top: 18px;
+        height: 510px;
+    }
+    .contact-form {
+        width: 747px;
+        height: 471px;
+        margin-top: 271px;
+        margin-left: 10px;
+        padding: 63px;
+    }
+
+    #formulario-contacto{
+        height: 393px;
+        width: 887px;
+        margin: 10px;
+        margin-top: 0px;
+        margin-left: -7px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 80vw;
+    }
+
+    #formulario-contacto button {
+        width: 35%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .whatsapp-contact img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Para móviles */
+@media screen and (max-width: 480px) {
+
+    #contacto {
+        margin-top: 18px;
+        height: 607px;
+    }
+    .contact-form {
+        width: 623px;
+        height: 578px;
+        margin-top: 0px;
+        margin-left: 10px;
+        padding: 103px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 80vw;
+    }
+
+    #formulario-contacto button {
+        width: 35%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .whatsapp-contact img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* footer */
+footer {
+    background-color: #012E4A;
+    color: #E8EDE7;
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Secciones del footer */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #81BECE;
+    padding-bottom: 5px;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 19px;
+
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+
+
+}
+
+.footer-section ul li a {
+    color: #E8EDE7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    align-items: center;
+
+}
+
+.footer-section ul li a:hover {
+    color: #378BA4;
+}
+
+/* Redes sociales */
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* Derechos de autor */
+.footerCopy {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #81BECE;
+    width: 100%;
+}
+
+.footerCopy p {
+    margin: 0;
+    font-size: 25px;
+}
+
+/* Responsive */
+@media screen and (max-width: 767px) {
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    footer {
+        width: 646px;
+        height: 940px;
+        padding: 40px 20px;
+
+    }
+
+}
+
+/* Media query para pantallas de escritorio (pantallas de 1024px en adelante) */
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 1200px;
+    }
+}
