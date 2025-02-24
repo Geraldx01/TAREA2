@@ -1,0 +1,259 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(274deg, #E8EDE7 -44%, #378BA4 3%, #036280 4%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #E8EDE7;
+}
+
+/* Barra de navegación */
+.barraNavegacion {
+    background-color: #012E4A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#logo img {
+    height: 60px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin: 0 10px;
+}
+
+#menu a {
+    color: #E8EDE7;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#menu a:hover {
+    background-color: #378BA4;
+}
+
+.menuToggle {
+    font-size: 24px;
+    color: #E8EDE7;
+    cursor: pointer;
+    display: none;
+}
+
+/* Inicio de sesión / Registrarse */
+#botonAbrir {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #012E4A;
+    color: #E8EDE7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botonAbrir:hover {
+    background-color: #378BA4;
+}
+
+#seccionDesplegable {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-desplegable {
+    background-color: #E8EDE7;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    color: #012E4A;
+}
+
+#seccionDesplegable .boton-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#seccionDesplegable input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#seccionDesplegable button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #012E4A;
+    color: #E8EDE7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#seccionDesplegable button:hover {
+    background-color: #378BA4;
+}
+
+/* Carrito de compras */
+#carrito {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: #012E4A;
+    border: 2px solid #81BECE;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+    color: #E8EDE7;
+}
+
+.carrito-icono {
+    color: #E8EDE7;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.contador-carrito {
+    background-color: red;
+    color: #E8EDE7;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+/* Secciones principales */
+#inicio, #productos, #servicios, #contacto {
+    padding: 20px;
+    margin-top: 75px;
+}
+
+/* Footer */
+footer {
+    background-color: #012E4A;
+    color: #E8EDE7;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #E8EDE7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #378BA4;
+}
+
+.footerCopy {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #81BECE;
+}
+
+.footerCopy p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries para Responsividad */
+@media screen and (max-width: 767px) {
+    .barraNavegacion {
+        padding: 10px;
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 75px;
+        right: 0;
+        background-color: #012E4A;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu.active {
+        display: flex;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+
+    #logo img {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #menu a {
+        padding: 8px 10px;
+    }
+
+    .contenido-desplegable {
+        width: 90%;
+    }
+
+    #inicio, #productos, #servicios, #contacto {
+        padding: 10px;
+    }
+}
